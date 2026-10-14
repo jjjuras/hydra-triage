@@ -1,5 +1,7 @@
 # hydra-triage
 
+![CI](https://github.com/jjjuras/hydra-triage/actions/workflows/ci.yml/badge.svg) · MIT
+
 **Question.** Anthropic's February 2026 report described industrial-scale distillation of Claude run through "hydra cluster" networks of fraudulent accounts: synchronized traffic, identical prompt structures, shared payment methods, coordinated timing, volume concentrated in narrow areas, chain-of-thought elicitation, and traffic that redirected within 24 hours of a model release. Its September 2026 threat report added reseller proxies that rotate stolen keys, account factories banking verified accounts, and resellers that silently proxy to a different model. The unit of abuse is a network, not an account: ban one head and another grows. Can a triage pipeline rank *networks* from behavior alone, precision first, and what does it lose as the attacker adapts?
 
 **What this is.** A small, runnable system on labeled synthetic logs:
