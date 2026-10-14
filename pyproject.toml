@@ -1,0 +1,16 @@
+[project]
+name = "hydra-triage"
+version = "0.1.0"
+description = "Finding hydra clusters: triage of coordinated model-extraction, reseller, and account-farm traffic from behavior alone, on synthetic API logs with an attacker-adaptation round."
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pandas>=2.2", "scikit-learn>=1.5", "duckdb>=1.1"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

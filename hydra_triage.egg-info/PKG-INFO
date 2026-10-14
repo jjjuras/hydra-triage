@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: hydra-triage
+Version: 0.1.0
+Summary: Finding hydra clusters: triage of coordinated model-extraction, reseller, and account-farm traffic from behavior alone, on synthetic API logs with an attacker-adaptation round.
+Requires-Python: >=3.11
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.2
+Requires-Dist: scikit-learn>=1.5
+Requires-Dist: duckdb>=1.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Requires-Dist: ruff>=0.6; extra == "dev"
