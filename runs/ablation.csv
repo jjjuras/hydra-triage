@@ -1,0 +1,26 @@
+level,variant,precision@10.mean,precision@10.min,precision@10.max,ring_recall@25.mean,ring_recall@25.min,ring_recall@25.max,cases_to_ring_recall_90.mean,cases_to_ring_recall_90.min,cases_to_ring_recall_90.max,legit_seen_to_ring_recall_90.mean,legit_seen_to_ring_recall_90.min,legit_seen_to_ring_recall_90.max,n_seeds
+L0_shares_everything,identifiers only,0.6599999999999999,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L0_shares_everything,identifiers + behavior,0.6599999999999999,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L0_shares_everything,"identifiers + behavior, no anomaly tie-break",0.6599999999999999,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L1_jitters_schedule_spreads_cards_dilutes_templates,identifiers only,0.72,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L1_jitters_schedule_spreads_cards_dilutes_templates,identifiers + behavior,0.72,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L1_jitters_schedule_spreads_cards_dilutes_templates,"identifiers + behavior, no anomaly tie-break",0.72,0.6,0.8,1.0,1.0,1.0,3.0,3,3,0.0,0,0,5
+L2_stops_sharing_cards_devices_ips,identifiers only,0.8800000000000001,0.7,1.0,1.0,1.0,1.0,3.8,3,5,0.0,0,0,5
+L2_stops_sharing_cards_devices_ips,identifiers + behavior,0.74,0.6,0.8,1.0,1.0,1.0,3.6,3,4,0.0,0,0,5
+L2_stops_sharing_cards_devices_ips,"identifiers + behavior, no anomaly tie-break",0.74,0.6,0.8,1.0,1.0,1.0,3.6,3,4,0.0,0,0,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers only,1.0,1.0,1.0,0.17277777777777778,0.11944444444444445,0.23333333333333334,287.6,268,308,0.0,0,0,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + behavior,0.9,0.5,1.0,0.9833333333333332,0.9166666666666666,1.0,4.8,1,19,0.2,0,1,5
+L3_stops_sharing_cards_devices_ips_templates,"identifiers + behavior, no anomaly tie-break",0.9,0.5,1.0,0.985,0.925,1.0,4.2,1,16,0.2,0,1,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + activity+topic only,1.0,1.0,1.0,0.8861111111111111,0.7527777777777778,1.0,31.4,4,78,0.2,0,1,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + release+topic only,1.0,1.0,1.0,0.8388888888888889,0.6916666666666667,0.95,46.4,7,97,0.2,0,1,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + activity only,1.0,1.0,1.0,0.8861111111111111,0.7527777777777778,1.0,31.4,4,78,0.2,0,1,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + topic only,0.38,0.3,0.5,1.0,1.0,1.0,1.0,1,1,1.0,0,3,5
+L3_stops_sharing_cards_devices_ips_templates,identifiers + release only,1.0,1.0,1.0,0.8433333333333334,0.6944444444444444,0.9555555555555556,44.8,5,96,134.2,3,278,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers only,1.0,1.0,1.0,0.2461111111111111,0.1,0.5361111111111111,262.8,159,315,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + behavior,1.0,1.0,1.0,0.8111111111111111,0.6361111111111111,0.9166666666666666,56.8,19,119,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,"identifiers + behavior, no anomaly tie-break",1.0,1.0,1.0,0.8116666666666668,0.6388888888888888,0.9166666666666666,56.8,19,119,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + activity+topic only,1.0,1.0,1.0,0.2461111111111111,0.1,0.5361111111111111,262.8,159,315,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + release+topic only,1.0,1.0,1.0,0.8111111111111111,0.6361111111111111,0.9166666666666666,56.8,19,119,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + activity only,1.0,1.0,1.0,0.2461111111111111,0.1,0.5361111111111111,262.8,159,315,2.0,0,9,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + topic only,0.45999999999999996,0.3,0.6,1.0,1.0,1.0,1.0,1,1,0.6,0,1,5
+L4_stops_sharing_cards_devices_ips_templates_schedule,identifiers + release only,1.0,1.0,1.0,0.8216666666666667,0.6472222222222223,0.925,53.0,16,115,53.4,3,188,5
