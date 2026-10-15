@@ -35,7 +35,7 @@ uv venv .venv --python 3.13 && uv pip install --python .venv/bin/python -e ".[de
 
 No API key, no network, no real data. The analyst view is a DuckDB SQL query over the scored table, because that is what an investigator would actually run.
 
-## Prior work this builds on
+## References
 
 Model extraction and distillation: Hinton, Vinyals & Dean, *Distilling the Knowledge in a Neural Network* ([arXiv:1503.02531](https://arxiv.org/abs/1503.02531)); Tramèr et al., *Stealing Machine Learning Models via Prediction APIs*, USENIX Security 2016 ([arXiv:1609.02943](https://arxiv.org/abs/1609.02943)); Orekondy, Schiele & Fritz, *Knockoff Nets*, CVPR 2019 ([arXiv:1812.02766](https://arxiv.org/abs/1812.02766)); Krishna et al., *Thieves on Sesame Street! Model Extraction of BERT-based APIs*, ICLR 2020 ([arXiv:1910.12366](https://arxiv.org/abs/1910.12366)); Carlini et al., *Stealing Part of a Production Language Model*, ICML 2024 ([arXiv:2403.06634](https://arxiv.org/abs/2403.06634)). Output watermarking as a countermeasure: Kirchenbauer et al., *A Watermark for Large Language Models*, ICML 2023 ([arXiv:2301.10226](https://arxiv.org/abs/2301.10226)).
 
