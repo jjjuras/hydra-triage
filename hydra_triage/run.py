@@ -1,6 +1,6 @@
 """End to end: synthesize → features → link → score → evaluate, for the base world and the adapted attacker.
 
-    python -m hydra_triage.run --seed 1 --out runs/
+python -m hydra_triage.run --seed 1 --out runs/
 """
 
 from __future__ import annotations
@@ -38,7 +38,12 @@ def main(argv: list[str] | None = None) -> int:
     out = Path(a.out)
     out.mkdir(parents=True, exist_ok=True)
     summary = {}
-    for label, adapted in (("base", 0), ("adapted", 1), ("no_identifiers", 2), ("no_identifiers_no_templates", 3)):
+    for label, adapted in (
+        ("base", 0),
+        ("adapted", 1),
+        ("no_identifiers", 2),
+        ("no_identifiers_no_templates", 3),
+    ):
         cfg = SynthConfig(seed=a.seed, days=a.days, adapted=adapted)
         results, cases, scored = pipeline(cfg)
         summary[label] = results
@@ -47,7 +52,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"=== {label} ===")
         print(fmt(results))
         print("top cases:")
-        print(cases.head(8)[["component", "accounts", "volume", "case_score", "synchrony", "evidence"]].to_string(index=False, max_colwidth=90))
+        print(
+            cases.head(8)[
+                ["component", "accounts", "volume", "case_score", "synchrony", "evidence"]
+            ].to_string(index=False, max_colwidth=90)
+        )
         # analyst view in SQL: the same table an investigator would query
         con = duckdb.connect()
         con.register("accounts", scored.reset_index())

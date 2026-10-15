@@ -6,7 +6,18 @@ from hydra_triage.graph import component_synchrony, link_accounts
 from hydra_triage.score import account_scores, component_cases
 from hydra_triage.synth import ABUSE_TYPES, SynthConfig, generate
 
-SMALL = SynthConfig(days=10, n_legit=300, n_rings=1, ring_size=30, n_resellers=1, reseller_keys=5, n_farms=1, farm_size=40, n_stolen=5, seed=3)
+SMALL = SynthConfig(
+    days=10,
+    n_legit=300,
+    n_rings=1,
+    ring_size=30,
+    n_resellers=1,
+    reseller_keys=5,
+    n_farms=1,
+    farm_size=40,
+    n_stolen=5,
+    seed=3,
+)
 
 
 def test_generator_is_deterministic_and_labeled():

@@ -80,11 +80,15 @@ def link_accounts(accounts: pd.DataFrame, requests: pd.DataFrame, min_shared_ip_
     return comp
 
 
-def component_synchrony(requests: pd.DataFrame, comp: pd.Series, days: int, max_members: int = 60) -> pd.Series:
+def component_synchrony(
+    requests: pd.DataFrame, comp: pd.Series, days: int, max_members: int = 60
+) -> pd.Series:
     """Mean pairwise correlation of members' hourly activity. People sharing a company are correlated a little;
     a ring on one schedule is correlated a lot."""
     H = days * 24
-    hourly = requests.pivot_table(index="account_id", columns="hour", values="requests", aggfunc="sum", fill_value=0)
+    hourly = requests.pivot_table(
+        index="account_id", columns="hour", values="requests", aggfunc="sum", fill_value=0
+    )
     hourly = hourly.reindex(columns=range(H), fill_value=0)
     out = {}
     for c, members in comp.groupby(comp).groups.items():

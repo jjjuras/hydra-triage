@@ -15,15 +15,35 @@ from .features import FEATURE_COLS
 
 RULES = {
     # name: (predicate over account features → bool, weight, human reason)
-    "narrow_topics_high_volume": (lambda f: (f["topic_entropy"] < 1.6) & (f["total_requests"] > 2000), 2.0, "volume concentrated in narrow topics"),
+    "narrow_topics_high_volume": (
+        lambda f: (f["topic_entropy"] < 1.6) & (f["total_requests"] > 2000),
+        2.0,
+        "volume concentrated in narrow topics",
+    ),
     "repetitive_templates": (lambda f: f["template_rate"] > 0.6, 1.5, "highly repetitive prompt structures"),
     "cot_elicitation": (lambda f: f["cot_rate"] > 0.35, 2.0, "chain-of-thought elicitation at scale"),
     "long_outputs": (lambda f: f["out_in_ratio"] > 2.5, 1.0, "output-heavy exchanges (training data shape)"),
-    "release_redirect": (lambda f: (f["release_shift"] > 0.3) & (f["total_requests"] > 500), 1.5, "traffic redirected to the new model within 48h of release"),
-    "flat_around_clock": (lambda f: (f["hod_entropy"] > 4.4) & (f["total_requests"] > 20000), 1.5, "flat around-the-clock volume (proxy/reseller shape)"),
+    "release_redirect": (
+        lambda f: (f["release_shift"] > 0.3) & (f["total_requests"] > 500),
+        1.5,
+        "traffic redirected to the new model within 48h of release",
+    ),
+    "flat_around_clock": (
+        lambda f: (f["hod_entropy"] > 4.4) & (f["total_requests"] > 20000),
+        1.5,
+        "flat around-the-clock volume (proxy/reseller shape)",
+    ),
     "many_ips": (lambda f: f["n_ip"] > 500, 1.5, "hundreds of end-user IPs behind one key"),
-    "new_account_promo": (lambda f: (f["account_age_days"] < 12) & (f["promo_share"] > 0.8), 1.0, "new account living on promotional credit"),
-    "card_test_burst": (lambda f: (f["hours_active"] <= 3) & (f["total_requests"] > 5) & (f["promo_share"] > 0.8), 1.0, "tiny burst then silence (card test / banked account)"),
+    "new_account_promo": (
+        lambda f: (f["account_age_days"] < 12) & (f["promo_share"] > 0.8),
+        1.0,
+        "new account living on promotional credit",
+    ),
+    "card_test_burst": (
+        lambda f: (f["hours_active"] <= 3) & (f["total_requests"] > 5) & (f["promo_share"] > 0.8),
+        1.0,
+        "tiny burst then silence (card test / banked account)",
+    ),
 }
 
 
